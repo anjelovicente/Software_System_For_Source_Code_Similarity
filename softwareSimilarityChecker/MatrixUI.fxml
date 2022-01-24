@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="softwareSimilarityChecker.matrixController">
+    <top>
+        <Label fx:id="projectTitle" focusTraversable="false" text="Label" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="SansSerif Regular" size="12.0" />
+         </font></Label>
+    </top>
+    <center>
+        <ScrollPane fx:id="scrollPane" focusTraversable="false" BorderPane.alignment="CENTER">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0" />
+            </content>
+        </ScrollPane>
+    </center>
+   <left>
+        <TableView fx:id="highestScoresDataTableView" focusTraversable="false" prefHeight="200.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="highestScoresDataTableColumn" prefWidth="299.0" text="TOP 10 HIGHEST SCORES" />
+            </columns>
+        </TableView>
+   </left>
+   <right>
+      <TableView fx:id="filesTableView" focusTraversable="false" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn fx:id="filesTableColumn" prefWidth="247.0" text="FILE NUMBER" />
+         </columns>
+      </TableView>
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="30.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#setHomeButton" prefHeight="30.0" prefWidth="64.0" text="HOME" underline="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Cambria Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button focusTraversable="false" layoutX="715.0" layoutY="1.0" mnemonicParsing="false" onAction="#setGoToMetricsButton" prefHeight="30.0" prefWidth="85.0" text="METRICS" underline="true" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Cambria Bold" size="15.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
